@@ -1,6 +1,6 @@
 import { Container, Box } from "@chakra-ui/react";
 
-const Page = () => {
+const Work = () => {
   return (
     <Container pt={10}>
       <Box
@@ -9,13 +9,11 @@ const Page = () => {
         p={3}
         mb={6}
         align="center"
-        h={"2000px"}
-        w={"100%"}
       >
-        under construction now...
+        Work Page is under construction now...
       </Box>
     </Container>
   );
 };
 
-export default Page;
+export default Work;

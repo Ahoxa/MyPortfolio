@@ -3,14 +3,14 @@ import { ChakraProvider } from "@chakra-ui/react";
 import theme from "../lib/theme";
 import Main from "../components/layouts/main";
 
-const App = ({ Component, pageProps }) => {
+const Home = ({ Component, pageProps, router }) => {
   return (
     <ChakraProvider theme={theme}>
-      <Main>
-        <Component {...pageProps} />
+      <Main router={router}>
+        <Component {...pageProps} key={router.route} />
       </Main>
     </ChakraProvider>
   );
 };
 
-export default App;
+export default Home;
