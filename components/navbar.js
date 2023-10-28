@@ -39,16 +39,17 @@ const Navbar = (props) => {
       w="100%"
       style={{ backdropFilter: " blur(10px)" }}
       zIndex={1}
+      display="flex"
+      justifyContent="center"
       {...props}
-      // bgColor={"red"}
     >
       <Flex
         p={2}
         wrap="wrap"
         align="center"
         justify="space-between"
+        w={{ base: "95%", md: "80%" }}
       >
-
         {/* Logo */}
         <Flex align="center" flex={1}>
           <Heading as="h1" size="lg" letterSpacing="tighter">
@@ -104,7 +105,6 @@ const Navbar = (props) => {
             </Menu>
           </Box>
         </Box>
-
       </Flex>
     </Box>
   );
