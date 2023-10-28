@@ -1,9 +1,8 @@
 import Link from "next/link";
-import { Text, VStack, useColorModeValue } from "@chakra-ui/react";
+import { Text, VStack } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 
 const LogoBox = styled.span`
-  font-family: "Noticia Text", serif;
   display: inline-flex;
   align-items: center;
   height: 55px;
@@ -16,22 +15,37 @@ const LogoBox = styled.span`
 `;
 
 const Logo = () => {
-  const color = useColorModeValue("rgb(29,43,88)", "rgb(238,226,882)");
   return (
     <Link href="/" scroll={false}>
       <LogoBox>
-        <Text color={color} fontSize="40px" >
+        <Text
+          fontSize="40px"
+          fontFamily="Cormorant Garamond"
+          fontWeight="light"
+        >
           {"{"}
         </Text>
-        <VStack alignItems="start" mx={1}>
-          <Text color={color} fontSize="20px">
+        <VStack alignItems="start" mx={2}>
+          <Text
+            fontSize="20px"
+            fontFamily="Cormorant Garamond"
+            fontWeight="light"
+          >
             Ahoxa
           </Text>
-          <Text color={color} fontSize="20px">
+          <Text
+            fontSize="20px"
+            fontFamily="Cormorant Garamond"
+            fontWeight="light"
+          >
             Portfolio
           </Text>
         </VStack>
-        <Text color={color} fontSize="40px">
+        <Text
+          fontSize="40px"
+          fontFamily="Cormorant Garamond"
+          fontWeight="light"
+        >
           {"}"}
         </Text>
       </LogoBox>

@@ -2,10 +2,8 @@ import { forwardRef } from "react";
 import Logo from "./logo";
 import NextLink from "next/link";
 import {
-  Container,
   Box,
   Link,
-  Stack,
   HStack,
   Heading,
   Flex,
@@ -16,6 +14,7 @@ import {
   IconButton,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import ThemeToggleButton from "./themeToggleButton";
 
 const LinkItem = ({ href, children }) => {
   return (
@@ -24,6 +23,8 @@ const LinkItem = ({ href, children }) => {
     </Link>
   );
 };
+
+const Divider = () => <span style={{ marginX: "8px" }}>/</span>;
 
 const MenuLink = forwardRef((props, ref) => (
   <Link ref={ref} as={NextLink} {...props} />
@@ -38,7 +39,7 @@ const Navbar = (props) => {
       as="nav"
       w="100%"
       style={{ backdropFilter: " blur(10px)" }}
-      zIndex={1}
+      zIndex={2}
       display="flex"
       justifyContent="center"
       {...props}
@@ -62,7 +63,7 @@ const Navbar = (props) => {
           display={{ base: "none", md: "flex" }}
           width={{ base: "full", md: "auto" }}
           flexGrow={1}
-          mt={{ base: 4, normalizemd: 0 }}
+          mt={{ base: 4, md: 0 }}
           spacing={3}
           flex={2}
           justifyContent="center"
@@ -70,9 +71,11 @@ const Navbar = (props) => {
           <LinkItem href="/works" path={path}>
             Works
           </LinkItem>
+          <Divider />
           <LinkItem href="/posts" path={path}>
             Posts
           </LinkItem>
+          <Divider />
           <LinkItem href="/illust" path={path}>
             Illustrations
           </LinkItem>
@@ -80,6 +83,7 @@ const Navbar = (props) => {
 
         {/* HamburgerMenu */}
         <Box flex={1} align="right">
+          <ThemeToggleButton />
           <Box ml={2} display={{ base: "inline-block", md: "none" }}>
             <Menu>
               <MenuButton

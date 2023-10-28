@@ -1,21 +1,13 @@
-import { Container, Box } from "@chakra-ui/react";
+import HeroImage from "../components/heroImage";
+import Profile from "../components/profile";
 
-const Page = () => {
+const Home = () => {
   return (
-    <Container pt={10}>
-      <Box
-        borderRadius={"lg"}
-        bgColor={{ base: "blue.100", sm: "green.100" }}
-        p={3}
-        mb={6}
-        align="center"
-        h={"2000px"}
-        w={"100%"}
-      >
-        under construction now...
-      </Box>
-    </Container>
+    <>
+      <HeroImage />
+      <Profile />
+    </>
   );
 };
 
-export default Page;
+export default Home;
