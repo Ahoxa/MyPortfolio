@@ -24,8 +24,8 @@ const Profile = () => {
   const direction = useBreakpointValue({ base: "column", md: "row" });
 
   return (
-    <Container maxW="container.lg" h="95vh">
-      <VStack p="5%" h="90%" bg={bgColor} borderRadius={10} mt={8}>
+    <Container maxW="container.lg" mb="20vh">
+      <VStack p="5%"  bg={bgColor} borderRadius={10} mt={8}>
         <Text fontSize={{ base: "0.8rem", sm: "1rem", md: "1.35rem" }}>
           Hello, I'm
         </Text>
@@ -66,7 +66,7 @@ const Profile = () => {
           as={NextLink}
           href={"/works"}
           bg={buttonColor}
-          size={{ base: "sm", md: "md" }}
+          size={{ base: "sm", md: "md", lg: "lg" }}
         >
           <Text color={textcolor}>See My Works</Text>
         </Button>
