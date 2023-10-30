@@ -12,13 +12,37 @@ import {
   MenuList,
   MenuButton,
   IconButton,
+  useColorModeValue,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import ThemeToggleButton from "./themeToggleButton";
 
+const linkStyle = {
+  position: "relative",
+  _before: {
+    content: '""',
+    position: "absolute",
+    width: "70%",
+    height: "2px",
+    borderRadius: "4px",
+    backgroundColor: "currentColor",
+    bottom: "5px",
+    left: "15%",
+    transformOrigin: "right",
+    transform: "scaleX(0)",
+    transition: "transform .3s ease-in-out"
+  },
+  _hover: {
+    _before: {
+      transformOrigin: "left",
+      transform: "scaleX(1)"
+    },
+  },
+};
+
 const LinkItem = ({ href, children }) => {
   return (
-    <Link as={NextLink} href={href} scroll={false} p={2}>
+    <Link as={NextLink} href={href} scroll={false} p={2} {...linkStyle}>
       {children}
     </Link>
   );
