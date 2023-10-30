@@ -3,7 +3,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 import theme from "../lib/theme";
 import Main from "../components/layouts/main";
 
-const Home = ({ Component, pageProps, router }) => {
+const Page = ({ Component, pageProps, router }) => {
   return (
     <ChakraProvider theme={theme}>
       <Main router={router}>
@@ -13,4 +13,4 @@ const Home = ({ Component, pageProps, router }) => {
   );
 };
 
-export default Home;
+export default Page;

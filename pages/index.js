@@ -3,6 +3,7 @@ import HeroImage from "../components/heroImage";
 import Profile from "../components/profile";
 import Bio from "../components/bio";
 import SNS from "../components/sns";
+import Contact from "../components/contact";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
       <Container maxW="container.lg">
         <Bio />
         <SNS />
+        <Contact />
       </Container>
     </>
   );

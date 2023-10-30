@@ -36,9 +36,6 @@ const AtCoderIcon = () => {
 };
 
 const SNS = () => {
-  const linkFont = "Inter, sans-serif";
-  const iconSize = 24;
-
   return (
     <>
       <Heading variant="section-title" mt="5vh" mb="2vh">
@@ -70,7 +67,16 @@ const SNS = () => {
         </CustomSection>
         <CustomSection>
           <Link href="https://atcoder.jp/users/Ah0xa" target="_blank">
-            <SNSButton icon={<AtCoderIcon />}>@Ahoxa</SNSButton>
+            <SNSButton icon={<AtCoderIcon />}>
+              @Ahoxa
+              <span
+                style={{
+                  color: "#A52A2A",
+                }}
+              >
+                (Brown)
+              </span>
+            </SNSButton>
           </Link>
         </CustomSection>
       </Box>

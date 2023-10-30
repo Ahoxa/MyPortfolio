@@ -12,31 +12,29 @@ import {
 } from "@chakra-ui/react";
 
 const Profile = () => {
-  const profileTetxt = `
-    Yuto is a fledgling front-end engineer passionately pursuing the expression he wants to create, as Ahoxa in the Web. 
-    He has a commitment to make beautiful stuff by himself. He also hopes to solve everyday problems with a variety of beautiful expressions, using not only coding but also design and modeling.
-  `;
-
   const bgColor = useColorModeValue("#EEE2B6", "#295C82");
-  const textcolor = useColorModeValue("#1D2B58", "#D4CCAC");
-  const buttonColor = useColorModeValue("#D4CCAC", "#1D2B58");
-
+  const textcolor = useColorModeValue("#D4CCAC", "#1D2B58");
+  const buttonColor = useColorModeValue("#1D2B58", "#D4CCAC");
   const direction = useBreakpointValue({ base: "column", md: "row" });
 
   return (
     <Container maxW="container.lg" mb="20vh">
-      <VStack p="5%"  bg={bgColor} borderRadius={10} mt={8}>
+      <VStack p="5%" bg={bgColor} borderRadius={10} mt={8}>
         <Text fontSize={{ base: "0.8rem", sm: "1rem", md: "1.35rem" }}>
           Hello, I'm
         </Text>
-        <Text fontSize={{ base: "32px", md: "40px" }} fontFamily="Inika" fontWeight="bold">
+        <Text
+          fontSize={{ base: "32px", md: "40px" }}
+          fontFamily="Inika"
+          fontWeight="bold"
+        >
           Yuto Hayashibara
         </Text>
-        <Text fontSize={{ base: "0.9rem", md:"1rem" }}>
+        <Text fontSize={{ base: "0.9rem", md: "1rem" }}>
           digital carpenter ( Artist / Developer / Designer )
         </Text>
         <Flex direction={direction} alignItems="center">
-          <Box flexShrink={0} mt={{ base: 4, md: 0 }} ml={{ md: 6 }} mr={2}>
+          <Box flexShrink={0} mt={{ base: 4, md: 0 }} ml={{ md: 6 }} mr={3}>
             <Image
               src="/retroMe.png"
               borderColor="whiteAlpha.800"
@@ -49,16 +47,26 @@ const Profile = () => {
             />
           </Box>
 
-          <Box whiteSpace="pre-wrap" ml={3}>
-            <Text
-              fontSize={{
-                base: "0.75rem",
-                sm: "1rem",
-                md: "1.25rem",
-                lg: "1.4rem",
-              }}
-            >
-              {profileTetxt}
+          <Box
+            ml={2}
+            my={5}
+            fontSize={{
+              base: "0.75rem",
+              sm: "1rem",
+              md: "1.25rem",
+              lg: "1.4rem",
+            }}
+            textIndent="1.5em"
+          >
+            <Text>
+              <strong>Yuto</strong> is a fledgling front-end engineer
+              passionately pursuing the expression he wants to create, as{" "}
+              <strong>Ahoxa</strong> in the Web.
+            </Text>
+            <Text>
+              He has a commitment to make beautiful stuff by himself. He also
+              hopes to solve everyday problems with a variety of beautiful
+              expressions, using not only coding but also design and modeling.
             </Text>
           </Box>
         </Flex>
