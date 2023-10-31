@@ -9,22 +9,27 @@ const LogoBox = styled.span`
   line-height: 20px;
   transition: all 0.3s ease-in-out;
 
-  &:hover {
-    transform: scale(1.05);
+  &:hover .bracket {
+    transform: translateX(-5px);
   }
+
+  &:hover .end-bracket {
+    transform: translateX(5px);
+  }
+`;
+
+const Bracket = styled.span`
+  font-size: 40px;
+  font-family: "Cormorant Garamond";
+  font-weight: light;
+  transition: all 0.3s ease-in-out;
 `;
 
 const Logo = () => {
   return (
     <Link href="/" scroll={false}>
       <LogoBox>
-        <Text
-          fontSize="40px"
-          fontFamily="Cormorant Garamond"
-          fontWeight="light"
-        >
-          {"{"}
-        </Text>
+        <Bracket className="bracket">{"{"}</Bracket>
         <VStack alignItems="start" mx={2}>
           <Text
             fontSize="20px"
@@ -41,13 +46,7 @@ const Logo = () => {
             Portfolio
           </Text>
         </VStack>
-        <Text
-          fontSize="40px"
-          fontFamily="Cormorant Garamond"
-          fontWeight="light"
-        >
-          {"}"}
-        </Text>
+        <Bracket className="end-bracket">{"}"}</Bracket>
       </LogoBox>
     </Link>
   );
