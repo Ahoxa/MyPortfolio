@@ -15,15 +15,7 @@ const HeroImage = () => {
 
   const breakpointValue = useBreakpointValue({ base: shortText, md: fulltext });
   const [targetText, setTargetText] = useState(breakpointValue);
-  const [isFirstRender, setIsFirstRender] = useState(true);
   const [displayText, setDisplayText] = useState("");
-
-  useEffect(() => {
-    if (isFirstRender) {
-      setIsFirstRender(false);
-      return;
-    }
-  }, []);
 
   useEffect(() => {
     setTargetText(breakpointValue);
@@ -32,13 +24,14 @@ const HeroImage = () => {
 
   useEffect(() => {
     let index = 0;
+    const targetEndsUndefined = targetText.endsWith("undefined");
 
     const typeInterval = setInterval(() => {
       if (index < targetText.length) {
         setDisplayText((prevText) => prevText + targetText[index]);
         index++;
       } else {
-        if (displayText.endsWith("undefined")) {
+        if (targetEndsUndefined) {
           setDisplayText((prevText) => prevText.replace("undefined", ""));
         }
         clearInterval(typeInterval);
