@@ -10,7 +10,7 @@ const Home = () => {
     <>
       <HeroImage />
       <Profile />
-      <Container maxW="container.lg">
+      <Container maxW="container.lg" >
         <Bio />
         <SNS />
         <Contact />
