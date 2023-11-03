@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import { Box, Text, useBreakpointValue } from "@chakra-ui/react";
+import { Box, Text } from "@chakra-ui/react";
 import Model from "./model";
 
 const HeroImage = () => {
-  const fulltext = `
+  const text = `
   const Ahoxa = () => {
     const elements = ['convenience', 'beauty', 'innovation' ];
     const combine = (items) => items.map((item) => \`Web’s \${item}\`).join(',');
@@ -12,9 +12,6 @@ const HeroImage = () => {
     makeWorldBetter();
     };
   `;
-  const shortText = "Ahoxa();";
-
-  const text = useBreakpointValue({ base: shortText, md: fulltext });
 
   const [displayText, setDisplayText] = useState("");
   const [index, setIndex] = useState(0);
