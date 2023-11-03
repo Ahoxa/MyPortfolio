@@ -53,6 +53,7 @@ const HeroImage = () => {
       mb={10}
       background="transparent"
       whiteSpace="pre-wrap"
+      zIndex={1}
     >
       <Text fontSize="2rem" position="absolute" zIndex={2}>
         {displayText}
