@@ -14,33 +14,22 @@ const HeroImage = () => {
   `;
   const shortText = "Ahoxa();";
 
-  const breakpointValue = useBreakpointValue({ base: shortText, md: fulltext });
-  const [targetText, setTargetText] = useState(breakpointValue);
+  const text = useBreakpointValue({ base: shortText, md: fulltext });
+
   const [displayText, setDisplayText] = useState("");
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    setTargetText(breakpointValue);
-    setDisplayText("");
-  }, [breakpointValue]);
-
-  useEffect(() => {
-    let index = 0;
-    const targetEndsUndefined = targetText.endsWith("undefined");
-
-    const typeInterval = setInterval(() => {
-      if (index < targetText.length) {
-        setDisplayText((prevText) => prevText + targetText[index]);
-        index++;
+    const interval = setInterval(() => {
+      if (index < text.length) {
+        setDisplayText((prev) => prev + text[index]);
+        setIndex((prev) => prev + 1);
       } else {
-        if (targetEndsUndefined) {
-          setDisplayText((prevText) => prevText.replace("undefined", ""));
-        }
-        clearInterval(typeInterval);
+        clearInterval(interval);
       }
-    }, 50);
-
-    return () => clearInterval(typeInterval);
-  }, [targetText]);
+    }, 110);
+    return () => clearInterval(interval);
+  }, [index, text]);
 
   return (
     <Box
