@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Box, Text } from "@chakra-ui/react";
+import { Box, Text, useBreakpointValue } from "@chakra-ui/react";
 import Model from "./model";
 
 const HeroImage = () => {
@@ -12,7 +12,8 @@ const HeroImage = () => {
     makeWorldBetter();
     };
   `;
-
+  
+  const fontSize = useBreakpointValue({ base: "1rem", md: "2rem" });
   const [displayText, setDisplayText] = useState("");
   const [index, setIndex] = useState(0);
 
@@ -41,7 +42,7 @@ const HeroImage = () => {
       whiteSpace="pre-wrap"
       zIndex={1}
     >
-      <Text fontSize="2rem" position="absolute" zIndex={2}>
+      <Text fontSize={fontSize} position="absolute" zIndex={2}>
         {displayText}
       </Text>
       <Model />
