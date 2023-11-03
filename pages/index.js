@@ -1,5 +1,5 @@
 import { Container } from "@chakra-ui/react";
-import HeroImage from "../components/heroImage";
+import HeroImage from "../components/heroImage/heroImage";
 import Profile from "../components/profile";
 import Bio from "../components/bio";
 import SNS from "../components/sns";

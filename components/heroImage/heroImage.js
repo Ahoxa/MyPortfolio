@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Box, Text, useBreakpointValue } from "@chakra-ui/react";
+import Model from "./model";
 
 const HeroImage = () => {
   const fulltext = `
@@ -43,6 +44,7 @@ const HeroImage = () => {
 
   return (
     <Box
+      position="relative"
       display="flex"
       justifyContent="center"
       alignItems="center"
@@ -51,11 +53,11 @@ const HeroImage = () => {
       mb={10}
       background="transparent"
       whiteSpace="pre-wrap"
-      zIndex={1}
     >
-      <Text color="white" fontSize="2rem">
+      <Text fontSize="2rem" position="absolute" zIndex={2}>
         {displayText}
       </Text>
+      <Model />
     </Box>
   );
 };
