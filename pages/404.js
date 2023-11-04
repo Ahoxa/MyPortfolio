@@ -1,6 +1,5 @@
 import NextLink from "next/link";
-import { Box, Heading, Text, Link, Button } from "@chakra-ui/react";
-import { pages } from "next/dist/build/templates/app-page";
+import { Box, Heading, Text, Button } from "@chakra-ui/react";
 
 const NotFound = () => {
   return (
@@ -21,4 +20,3 @@ const NotFound = () => {
 };
 
 export default NotFound;
-

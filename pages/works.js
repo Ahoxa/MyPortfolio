@@ -1,4 +1,4 @@
-import { Container, SimpleGrid, Box } from "@chakra-ui/react";
+import { Container, SimpleGrid } from "@chakra-ui/react";
 import WorkingJitoneko from "../public/work/jitoneko_work.svg";
 import HeadingImg from "../components/common/headingImg";
 import GridItem from "../components/common/gridItem";
