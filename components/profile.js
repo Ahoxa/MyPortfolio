@@ -36,7 +36,7 @@ const Profile = () => {
         <Flex direction={direction} alignItems="center">
           <Box flexShrink={0} mt={{ base: 4, md: 0 }} ml={{ md: 6 }} mr={3}>
             <Image
-              src="/retroMe.png"
+              src="/home/retroMe.png"
               borderColor="whiteAlpha.800"
               borderWidth={2}
               borderRadius="full"

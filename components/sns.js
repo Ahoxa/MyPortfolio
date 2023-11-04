@@ -1,5 +1,5 @@
 import { Box, Heading, Link, Button } from "@chakra-ui/react";
-import { CustomSection } from "../lib/customSection";
+import { CustomSection } from "./common/customSection";
 import {
   AiFillGithub,
   AiFillInstagram,
@@ -30,7 +30,7 @@ const AtCoderIcon = () => {
       lineHeight="1em"
       position="relative"
     >
-      <Image src="/atcoder.svg" alt="AtCoder" layout="fill" />
+      <Image src="/home/atcoder.svg" alt="AtCoder" layout="fill" />
     </Box>
   );
 };

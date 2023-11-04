@@ -1,5 +1,5 @@
 import { Box, Heading, Text } from "@chakra-ui/react";
-import { CustomSection, Tag } from "../lib/customSection";
+import { CustomSection, Tag } from "./common/customSection";
 
 const Bio = () => {
   const fontSize = { base: "0.9rem", md: "1.3rem" };

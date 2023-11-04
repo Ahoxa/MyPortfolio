@@ -7,7 +7,7 @@ const Main = ({ children, router }) => {
   const breakpointValue = useBreakpointValue({ base: "100%", md: "80vw" });
 
   return (
-    <Box as="main" pb={8}>
+    <Box as="main" pb={8} minH="calc(100vh - 100px)">
       <Head>
         <meta name="viewport" content="width=device-width" />
         <title>Ahoxa Portfolio</title>
@@ -17,8 +17,8 @@ const Main = ({ children, router }) => {
 
       <Container maxW={breakpointValue} pt="10" centerContent>
         {children}
-        <Footer />
       </Container>
+      <Footer />
     </Box>
   );
 };

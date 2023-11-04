@@ -9,7 +9,7 @@ import {
 
 const Jitoneko = () => {
   const nekoRef = useRef();
-  const { scene: jitonekoScene } = useGLTF("/jitoneko.glb");
+  const { scene: jitonekoScene } = useGLTF("/home/jitoneko.glb");
 
   useFrame(() => {
     nekoRef.current.rotation.y += 0.005;
