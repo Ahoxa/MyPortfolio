@@ -92,15 +92,15 @@ const Navbar = (props) => {
           justifyContent="center"
         >
           <LinkItem href="/work" path={path}>
-            Works
+            Work
           </LinkItem>
           <Divider />
           <LinkItem href="/post" path={path}>
-            Posts
+            Post
           </LinkItem>
           <Divider />
           <LinkItem href="/illust" path={path}>
-            Illustrations
+            Illustration
           </LinkItem>
         </HStack>
 
