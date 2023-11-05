@@ -16,7 +16,7 @@ const GridItem = ({ children, id, title, thumbnail }) => {
   return (
     <>
       <LinkBox>
-        <Link as={NextLink} href={`/works/${id}`}>
+        <Link as={NextLink} href={`/work/${id}`}>
           <Box
             borderRadius={10}
             overflow="hidden"
@@ -34,7 +34,7 @@ const GridItem = ({ children, id, title, thumbnail }) => {
             />
           </Box>
         </Link>
-        <LinkOverlay href={`/works/${id}`} target="_blank">
+        <LinkOverlay href={`/work/${id}`} target="_blank">
           <Text mt={2} fontSize={titleSize} fontWeight="bold">
             {title}
           </Text>
