@@ -22,8 +22,8 @@ const Work = () => {
           This page is under construction in a big hurry!!
         </Text>
         <Box mt={10}>
-          <Button as={NextLink} href="/">
-            Return to Home
+          <Button as={NextLink} href="/work">
+            Return to Work
           </Button>
         </Box>
       </Box>

@@ -42,7 +42,7 @@ const HeroImage = () => {
       whiteSpace="pre-wrap"
       zIndex={1}
     >
-      <Text fontSize={fontSize} position="absolute" zIndex={2}>
+      <Text fontSize={fontSize} fontWeight="bold" position="absolute" zIndex={2}>
         {displayText}
       </Text>
       <Model />

@@ -91,11 +91,11 @@ const Navbar = (props) => {
           flex={2}
           justifyContent="center"
         >
-          <LinkItem href="/works" path={path}>
+          <LinkItem href="/work" path={path}>
             Works
           </LinkItem>
           <Divider />
-          <LinkItem href="/posts" path={path}>
+          <LinkItem href="/post" path={path}>
             Posts
           </LinkItem>
           <Divider />
@@ -117,16 +117,16 @@ const Navbar = (props) => {
               />
               <MenuList>
                 <MenuItem as={MenuLink} href="/">
-                  About
+                  Home
                 </MenuItem>
-                <MenuItem as={MenuLink} href="/works">
-                  Works
+                <MenuItem as={MenuLink} href="/work">
+                  Work
                 </MenuItem>
-                <MenuItem as={MenuLink} href="/posts">
-                  Posts
+                <MenuItem as={MenuLink} href="/post">
+                  Post
                 </MenuItem>
                 <MenuItem as={MenuLink} href="/illust">
-                  Illustrations
+                  Illustration
                 </MenuItem>
               </MenuList>
             </Menu>

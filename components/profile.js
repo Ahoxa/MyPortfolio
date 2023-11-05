@@ -72,7 +72,7 @@ const Profile = () => {
         </Flex>
         <Button
           as={NextLink}
-          href={"/works"}
+          href={"/work"}
           bg={buttonColor}
           size={{ base: "sm", md: "md", lg: "lg" }}
         >
