@@ -4,8 +4,8 @@ import MotionBox from "../components/common/motionBox";
 import GridItem from "../components/common/gridItem";
 
 import WorkingJitoneko from "../public/work/jitoneko_work.svg";
-import thumbPomoFlow from "../public/work/pomoflow.png";
-import thumbEbisu from "../public/work/ebisu.png";
+import thumbPomoFlow from "../public/work/pomoflow/pomoflow.png";
+import thumbEbisu from "../public/work/ebisu/ebisu.png";
 
 const Work = () => {
   return (
