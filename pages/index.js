@@ -8,23 +8,15 @@ import Contact from "../components/contact/contact";
 
 const Home = () => {
   return (
-    <>
+    <MotionBox>
       <HeroImage />
-      <MotionBox delay={1}>
-        <Profile />
-      </MotionBox>
+      <Profile />
       <Container maxW="container.lg">
-        <MotionBox delay={1.4}>
-          <Bio />
-        </MotionBox>
-        <MotionBox delay={1.8}>
-          <SNS />
-        </MotionBox>
-        <MotionBox delay={2.0}>
-          <Contact />
-        </MotionBox>
+        <Bio />
+        <SNS />
+        <Contact />
       </Container>
-    </>
+    </MotionBox>
   );
 };
 
