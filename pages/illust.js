@@ -8,7 +8,7 @@ import CupJitoneko from "../public/post/jitoneko_cup.svg";
 const Illust = () => {
   return (
     <MotionBox>
-      <Container pt={10} maxW="60vw">
+      <Container pt={10} maxW="container.lg">
         <HeadingImg title="Illustration" img={CupJitoneko} alt="cat in a cup" />
         <Box textAlign="center" mt={10}>
           <Heading p={10}>Sorry!</Heading>

@@ -10,7 +10,7 @@ import thumbEbisu from "../public/work/ebisu/ebisu.png";
 const Work = () => {
   return (
     <MotionBox>
-      <Container pt={10} maxW="60vw">
+      <Container pt={10} maxW="container.lg">
         <HeadingImg title="Work" img={WorkingJitoneko} alt="working cat" />
         <SimpleGrid columns={[1, 1, 2]} gap={6} mt={10}>
           <GridItem id="pomoflow" title="PomoFlow" thumbnail={thumbPomoFlow}>
