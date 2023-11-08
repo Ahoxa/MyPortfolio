@@ -20,7 +20,7 @@ import pomoflow02 from "../../public/work//pomoflow/pomoflow02.png";
 const Work = () => {
   return (
     <MotionBox>
-      <Container pt={10} maxW="60vw">
+      <Container pt={10} maxW="container.lg">
         <HeadingImg title="Work" img={WorkingJitoneko} alt="working cat" />
         <Title>
           PomoFlow <Badge>2023-</Badge>

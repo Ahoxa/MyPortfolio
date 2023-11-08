@@ -21,7 +21,7 @@ import ebisu02 from "../../public/work/ebisu/ebisu02.jpg";
 const Work = () => {
   return (
     <MotionBox>
-      <Container pt={10} maxW="60vw">
+      <Container pt={10} maxW="container.lg">
         <HeadingImg title="Work" img={WorkingJitoneko} alt="working cat" />
         <Title>
           Ebisu Poster <Badge>2022</Badge>
