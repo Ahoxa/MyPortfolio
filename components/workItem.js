@@ -33,8 +33,7 @@ const WorkImage = ({ src, alt }) => {
     <Box
       borderRadius="lg"
       overflow="hidden"
-      w="full"
-      maxW="xl"
+      w={{ base: "80%", md: "100%" }}
       mb={5}
     >
       <Image src={src} alt={alt} />
