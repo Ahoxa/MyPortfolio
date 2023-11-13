@@ -5,9 +5,9 @@ const P = ({ children }) => (
     textAlign="justify"
     textIndent="1.5rem"
     hyphens="auto"
+    mx={7}
     fontSize={{
-      base: "0.75rem",
-      sm: "1rem",
+      base: "1rem",
       md: "1.25rem",
       lg: "1.4rem",
     }}
