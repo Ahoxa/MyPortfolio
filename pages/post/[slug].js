@@ -48,7 +48,7 @@ const Posts = ({ post }) => {
           <ReactMarkdown
             components={{
               code(props) {
-                const { inline, children, className, node, ...rest } = props;
+                const { inline, children, className, ...rest } = props;
                 const match = /language-(\w+)/.exec(className || "");
                 if (inline) {
                   return (
@@ -68,12 +68,13 @@ const Posts = ({ post }) => {
                       <SyntaxHighlighter
                         PreTag={Box}
                         language={match[1]}
-                        children={String(children).replace(/\n$/, "")}
                         style={vscDarkPlus}
                         {...rest}
                         w="80%"
                         borderRadius={8}
-                      />
+                      >
+                        {String(children).replace(/\n$/, "")}
+                      </SyntaxHighlighter>
                     </Flex>
                   );
                 } else {
@@ -87,7 +88,7 @@ const Posts = ({ post }) => {
               p: P,
               h1: Heading,
               h2: Heading,
-              img: ({ node, ...props }) => {
+              img: ({ ...props }) => {
                 return (
                   <Box
                     as="img"
