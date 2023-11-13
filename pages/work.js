@@ -1,7 +1,7 @@
 import { Container, SimpleGrid } from "@chakra-ui/react";
 import MotionBox from "../components/common/motionBox";
 import HeadingImg from "../components/common/headingImg";
-import GridItem from "../components/common/gridItem";
+import GridItem from "../components/work-gridItem";
 
 import WorkingJitoneko from "../public/work/jitoneko_work.svg";
 import thumbPomoFlow from "../public/work/pomoflow/pomoflow.png";

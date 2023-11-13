@@ -29,12 +29,12 @@ const linkStyle = {
     left: "15%",
     transformOrigin: "right",
     transform: "scaleX(0)",
-    transition: "transform .3s ease-in-out"
+    transition: "transform .3s ease-in-out",
   },
   _hover: {
     _before: {
       transformOrigin: "left",
-      transform: "scaleX(1)"
+      transform: "scaleX(1)",
     },
   },
 };
@@ -91,16 +91,16 @@ const Navbar = (props) => {
           flex={2}
           justifyContent="center"
         >
+          <LinkItem href="/" path={path}>
+            Home
+          </LinkItem>
+          <Divider />
           <LinkItem href="/work" path={path}>
             Work
           </LinkItem>
           <Divider />
           <LinkItem href="/post" path={path}>
             Post
-          </LinkItem>
-          <Divider />
-          <LinkItem href="/illust" path={path}>
-            Illustration
           </LinkItem>
         </HStack>
 
@@ -124,9 +124,6 @@ const Navbar = (props) => {
                 </MenuItem>
                 <MenuItem as={MenuLink} href="/post">
                   Post
-                </MenuItem>
-                <MenuItem as={MenuLink} href="/illust">
-                  Illustration
                 </MenuItem>
               </MenuList>
             </Menu>

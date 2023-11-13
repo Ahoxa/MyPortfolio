@@ -54,10 +54,10 @@ const SNS = () => {
         </CustomSection>
         <CustomSection>
           <Link
-            href="https://www.instagram.com/retro.medamayaki/"
+            href="https://www.instagram.com/4h0xa.dev/"
             target="_blank"
           >
-            <SNSButton icon={<AiFillInstagram />}>@retromedamayaki</SNSButton>
+            <SNSButton icon={<AiFillInstagram />}>@4h0xa.dev</SNSButton>
           </Link>
         </CustomSection>
         <CustomSection>
