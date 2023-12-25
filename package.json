@@ -1,36 +1,17 @@
 {
-  "name": "portfolio",
-  "version": "0.1.0",
-  "description": "Yuto's Portfolio Website",
+  "name": "",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "author": "Yuto",
-  "license": "MIT",
   "dependencies": {
-    "@chakra-ui/icons": "^2.1.1",
-    "@chakra-ui/media-query": "^3.3.0",
-    "@chakra-ui/react": "^2.8.1",
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "@notionhq/client": "^2.2.13",
-    "@react-three/drei": "^9.88.11",
-    "@react-three/fiber": "^8.15.9",
-    "framer-motion": "^10.16.4",
-    "next": "13.5.6",
-    "notion-to-md": "^3.1.1",
-    "react": "^18",
-    "react-dom": "^18",
-    "react-icons": "^4.11.0",
-    "react-markdown": "^9.0.0",
-    "react-syntax-highlighter": "^15.5.0",
-    "sharp": "^0.32.6"
-  },
-  "devDependencies": {
-    "eslint": "^8.52.0",
-    "eslint-config-next": "13.5.6"
+    "@astrojs/check": "^0.3.4",
+    "astro": "^4.0.7",
+    "typescript": "^5.3.3"
   }
 }
