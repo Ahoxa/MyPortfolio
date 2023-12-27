@@ -1,0 +1,9 @@
+/* here, import Noticia Text and Cardo */
+@import url('https://fonts.googleapis.com/css2?family=Cardo&family=Noticia+Text&display=swap');
+
+body{
+    font-family: 'Noticia Text', serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-wrap: break-word;
+}
