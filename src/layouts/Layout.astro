@@ -14,4 +14,15 @@
 	<body class="bg-beige-200 dark:bg-navy-200 text-navy-200 dark:text-beige-100 transition-colors duration-500">
 		<slot />
 	</body>
+	<style is:global>
+		/* here, import Noticia Text and Cardo */
+		@import url('https://fonts.googleapis.com/css2?family=Cardo&family=Noticia+Text&display=swap');
+		
+		body{
+				font-family: 'Noticia Text', serif;
+				-webkit-font-smoothing: antialiased;
+				text-rendering: optimizeLegibility;
+				overflow-wrap: break-word;
+		}
+		</style>
 </html>
