@@ -5,44 +5,82 @@ import { IoLogoGithub } from 'react-icons/io5';
 import { RxHamburgerMenu } from 'react-icons/rx';
 ---
 
-<header class="fixed w-full z-10 flex items-center backdrop-blur-md">
-	<div class="flex-grow">
-		<Logo />
-	</div>
+<header class="fixed flex justify-center w-full py-3 z-10 backdrop-blur-md">
+	<div class="flex items-center w-[95%] md:w-[80%]">
+		<div class="flex-grow">
+			<Logo />
+		</div>
 
-	<div class="flex-grow hidden md:flex justify-center md:w-auto mt-4 md:mt-0">
-		<a href="/">Home</a>
-		<span class="mx-2">/</span>
-		<a href="/work">Work</a>
-		<span class="mx-2">/</span>
-		<a href="/post">Post</a>
-	</div>
+		<!-- hover-link and underline are unique class name -->
+		<div class="flex-grow hidden md:flex justify-center md:w-auto mt-4 md:mt-0">
+			<a href="/" class="hover-link relative text-lg">
+				Home
+				<span class="underline"></span>
+			</a>
+			<span class="mx-3">/</span>
+			<a href="/work" class="hover-link relative text-lg">
+				Work
+				<span class="underline"></span>
+			</a>
+			<span class="mx-3">/</span>
+			<a href="/post" class="hover-link relative text-lg">
+				Post
+				<span class="underline"></span>
+			</a>
+		</div>
 
-	<!-- Here ThemeToggleButton -->
-	<div class="flex-grow flex justify-end items-center mr-2">
-		<a
-			href="https://github.com/Ahoxa/MyPortfolio"
-			class="w-10 h-10 flex justify-center items-center mr-2"
-			><IoLogoGithub size={35} /></a
-		>
-		<ThemeToggleButton client:load />
+		<!-- Here ThemeToggleButton -->
+		<div class="flex-grow flex justify-end items-center mr-2">
+			<a
+				href="https://github.com/Ahoxa/MyPortfolio"
+				class="w-10 h-10 flex justify-center items-center mr-4"
+				><IoLogoGithub size={30} /></a
+			>
+			<ThemeToggleButton client:load />
 
-		<div class="dropdown dropdown-bottom dropdown-end inline-block md:hidden">
 			<div
-				tabindex="0"
-				role="button"
-				class="btn bg-transparent text-current m-1"
+				class="dropdown dropdown-bottom dropdown-end inline-block md:hidden ml-5"
 			>
-				<RxHamburgerMenu />
+				<div
+					tabindex="0"
+					role="button"
+					class="btn bg-transparent text-current m-1"
+				>
+					<RxHamburgerMenu />
+				</div>
+				<ul
+					tabindex="0"
+					class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+				>
+					<li><a href="/">Home</a></li>
+					<li><a href="/work">Work</a></li>
+					<li><a href="/post">Post</a></li>
+				</ul>
 			</div>
-			<ul
-				tabindex="0"
-				class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
-			>
-				<li><a href="/">Home</a></li>
-				<li><a href="/work">Work</a></li>
-				<li><a href="/post">Post</a></li>
-			</ul>
 		</div>
 	</div>
 </header>
+
+<style>
+	.hover-link {
+		position: relative;
+		cursor: pointer;
+	}
+
+	.hover-link:hover .underline {
+		transform: scaleX(1);
+		transform-origin: left;
+	}
+
+	.underline {
+		position: absolute;
+		bottom: -1px;
+		left: 15%;
+		height: 1px;
+		width: 75%;
+		background-color: currentColor;
+		transform-origin: right;
+		transform: scaleX(0);
+		transition: transform 300ms ease-in-out;
+	}
+</style>
