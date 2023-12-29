@@ -36,7 +36,6 @@ module.exports = {
         arrowParens: "always",
         rangeStart: 0,
         rangeEnd: Infinity,
-        jsxBracketSameLine: false,
         requirePragma: false,
         insertPragma: false,
         proseWrap: "preserve",
