@@ -1,5 +1,5 @@
 ---
-import Header from "../components/header/Header.astro";
+import Header from '../components/header/Header.astro';
 ---
 
 <!doctype html>
@@ -12,22 +12,24 @@ import Header from "../components/header/Header.astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>Ahoxa Portfolio</title>
 	</head>
-	<body class="bg-beige-200 dark:bg-navy-200 text-navy-200 dark:text-beige-100 transition-colors duration-500">
+	<body
+		class="bg-beige-200 dark:bg-navy-200 text-navy-200 dark:text-beige-100 transition-colors duration-500"
+	>
 		<Header />
 		<slot />
 	</body>
 	<style is:global>
 		/* here, import Noticia Text, Cardo and Cormorant Garamond */
 		@import url('https://fonts.googleapis.com/css2?family=Cardo&family=Cormorant+Garamond&family=Noticia+Text&display=swap');
-		
-		body{
-				font-family: 'Noticia Text', serif;
-				-webkit-font-smoothing: antialiased;
-				text-rendering: optimizeLegibility;
-				overflow-wrap: break-word;
+
+		body {
+			font-family: 'Noticia Text', serif;
+			-webkit-font-smoothing: antialiased;
+			text-rendering: optimizeLegibility;
+			overflow-wrap: break-word;
 		}
-		.group{
-			font-family:"Cormorant Garamond", serif;
+		.group {
+			font-family: 'Cormorant Garamond', serif;
 		}
-		</style>
+	</style>
 </html>
