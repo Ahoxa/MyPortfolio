@@ -10,21 +10,27 @@
     "astro": "astro",
     "format": "prettier --write 'src/**/*.{astro,ts,tsx}'"
   },
-  "prettier.documentSelectors": ["**/*.astro"],
+  "prettier.documentSelectors": [
+    "**/*.astro"
+  ],
   "[astro]": {
-   "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "dependencies": {
     "@astrojs/check": "^0.3.4",
     "@astrojs/react": "^3.0.8",
     "@astrojs/tailwind": "^5.0.4",
+    "@react-three/drei": "^9.92.7",
+    "@react-three/fiber": "^8.15.12",
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18",
     "astro": "^4.0.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
+    "react-simple-typewriter": "^5.0.1",
     "tailwindcss": "^3.4.0",
+    "three": "^0.160.0",
     "typescript": "^5.3.3"
   },
   "devDependencies": {

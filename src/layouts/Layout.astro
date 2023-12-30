@@ -13,10 +13,12 @@ import Header from '../components/header/Header.astro';
 		<title>Ahoxa Portfolio</title>
 	</head>
 	<body
-		class="bg-beige-200 dark:bg-navy-200 text-navy-200 dark:text-beige-100 transition-colors duration-500"
+		class="bg-beige-200 dark:bg-navy-200 text-navy-200 dark:text-beige-100 transition-colors duration-500 flex justify-center"
 	>
 		<Header />
-		<slot />
+		<div class="w-full md:max-w-[80%] pt-20">
+			<slot />
+		</div>
 	</body>
 	<style is:global>
 		/* here, import Noticia Text, Cardo and Cormorant Garamond */
