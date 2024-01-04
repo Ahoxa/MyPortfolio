@@ -3,11 +3,11 @@ import Model from './Model';
 import Typing from './Typing';
 ---
 
-<div class="relative flex justify-center items-center h-[65vh] w-full">
-	<div class="w-2/5 absolute left-10">
+<div class="flex justify-center items-center h-[65vh] w-full">
+	<div class="w-2/5 flex ml-10 md:ml-[10rem]">
 		<Typing client:load />
 	</div>
-	<div class="w-3/5 h-full absolute right-0">
+	<div class="w-1/2 md:w-3/5 h-full">
 		<Model client:load />
 	</div>
 </div>
