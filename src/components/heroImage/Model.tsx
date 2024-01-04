@@ -32,7 +32,6 @@ const Model = () => {
       <Stage>
         <Jitoneko />
       </Stage>
-      <OrbitControls />
     </Canvas>
   );
 };
