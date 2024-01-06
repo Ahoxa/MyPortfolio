@@ -1,0 +1,72 @@
+---
+import {
+	AiFillGithub,
+	AiFillInstagram,
+	AiFillTwitterCircle,
+} from 'react-icons/ai';
+---
+
+<div class="mb-10">
+	<h1 class="text-[3rem] font-bold underline mb-5">On the Web</h1>
+	<div class="flex flex-col items-start">
+		<a href="https://github.com/Ahoxa" target="_blank">
+			<AiFillGithub className="social-icon" />
+			<p>@Ahoxa</p>
+		</a>
+
+		<a href="https://www.instagram.com/4h0xa.dev/" target="_blank">
+			<AiFillInstagram className="social-icon" />
+			<p>@4h0xa.dev</p>
+		</a>
+
+		<a href="https://twitter.com/4h0xa" target="_blank">
+			<AiFillTwitterCircle className="social-icon" />
+			<p>@Ahoxa</p>
+		</a>
+
+		<a href="https://atcoder.jp/users/Ah0xa" target="_blank">
+			<object
+				data="/home/atcoder.svg"
+				type="image/svg+xml"
+				class="w-[1.25rem] md:w-[2.5rem]"></object>
+			<p>@Ahoxa</p>
+		</a>
+	</div>
+</div>
+
+<style>
+	a {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.5rem;
+		margin-bottom: 1.5rem;
+		border-radius: 5px;
+		transition: 0.5s;
+	}
+
+	a:hover {
+		background-color: rgba(255, 255, 255, 0.4);
+	}
+
+	p {
+		font-size: large;
+	}
+
+	@media (min-width: 768px) {
+		p {
+			font-size: x-large;
+		}
+	}
+
+	.social-icon {
+		width: 1.75rem;
+		height: 1.75rem;
+	}
+
+	@media (min-width: 768px) {
+		.social-icon {
+			width: 2rem;
+			height: 2rem;
+		}
+	}
+</style>
