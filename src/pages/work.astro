@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import Pomoflow from '../../public/work/pomoflow/pomoflow.png';
+import Ebisu from '../../public/work/ebisu/ebisu.png';
+---
+
+<Layout title=" - Work">
+
+		<div class="flex justify-center relative items-center max-w-5xl mb-5">
+			<p class="text-[4rem] md:text-[6rem] z-10">Work</p>
+			<object
+				data="work/jitoneko_work.svg"
+				type="image/svg+xml"
+				class="ml-[-10%] w-[55%]"></object>
+		</div>
+		<div class="flex justify-center items-center max-w-[85%]">
+			<div class="mx-3">
+				<a href="/work/pomoflow">
+					<Image src={Pomoflow} alt="Pomoflow" class="work-img" />
+				</a>
+				<h2>PomoFlow</h2>
+				<p class="work-text">
+					PomoFlow is a time management application that uses the Pomodoro
+					Technique.
+				</p>
+			</div>
+			<div class="mx-3">
+				<a href="/work/ebisu">
+					<Image src={Ebisu} alt="ebisu" class="work-img" />
+				</a>
+				<h2>Ebisu Poster</h2>
+				<p class="work-text">
+					Osaka University Yebisu Otoko Selection @ Osaka University Hill
+					Official Poster
+				</p>
+			</div>
+		</div>
+
+</Layout>
+
+<style>
+	h2 {
+		font-size: 1.5rem;
+		margin-top: 10px;
+	}
+
+	@media (min-width: 768px) {
+		h2 {
+			font-size: 2rem;
+		}
+	}
+
+	.work-text {
+		font-size: 1rem;
+	}
+
+	@media (min-width: 768px) {
+		.work-text {
+			font-size: 1.2rem;
+		}
+	}
+
+	.work-img {
+		border-radius: 1rem;
+		transition: transform 0.5s ease-in-out;
+	}
+
+	.work-img:hover {
+		transform: scale(1.1);
+	}
+</style>
