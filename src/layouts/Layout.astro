@@ -2,6 +2,7 @@
 import Header from '../components/header/Header.astro';
 import Footer from '../components/Footer.astro';
 const { title } = Astro.props;
+import { ViewTransitions } from 'astro:transitions';
 ---
 
 <!doctype html>
@@ -13,6 +14,7 @@ const { title } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Ahoxa Portfolio{title}</title>
+		<ViewTransitions />
 	</head>
 	<!-- body-height is an unique class not a tailwind -->
 	<body
@@ -23,18 +25,18 @@ const { title } = Astro.props;
 			<slot />
 		</div>
 		<Footer />
+		<style is:global>
+			/* here, import Merriweather, Cardo and Cormorant Garamond */
+			@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Cormorant+Garamond&family=Merriweather:wght@300;400;700&display=swap');
+			body {
+				font-family: 'Merriweather', serif;
+				-webkit-font-smoothing: antialiased;
+				text-rendering: optimizeLegibility;
+				overflow-wrap: break-word;
+			}
+			.body-height {
+				min-height: 100vh;
+			}
+		</style>
 	</body>
-	<style is:global>
-		/* here, import Merriweather, Cardo and Cormorant Garamond */
-		@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Cormorant+Garamond&family=Merriweather:wght@300;400;700&display=swap');
-		body {
-			font-family: 'Merriweather', serif;
-			-webkit-font-smoothing: antialiased;
-			text-rendering: optimizeLegibility;
-			overflow-wrap: break-word;
-		}
-		.body-height {
-			min-height: 100vh;
-		}
-	</style>
 </html>
