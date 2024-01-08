@@ -1,5 +1,5 @@
 ---
-import Logo from './Logo.astro';
+import Logo from './Logo.tsx';
 import ThemeToggleButton from './ThemeToggleButton.tsx';
 import { IoLogoGithub } from 'react-icons/io5';
 import { RxHamburgerMenu } from 'react-icons/rx';
@@ -8,7 +8,7 @@ import { RxHamburgerMenu } from 'react-icons/rx';
 <header class="fixed flex justify-center w-full py-3 z-20 backdrop-blur-md">
 	<div class="flex items-center w-[95%] md:w-[80%]">
 		<div class="flex-grow">
-			<Logo />
+			<Logo client:load />
 		</div>
 
 		<!-- hover-link and underline are unique class name -->
