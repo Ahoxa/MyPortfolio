@@ -1,0 +1,101 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { TbExternalLink } from 'react-icons/tb';
+import { Image } from 'astro:assets';
+import pomo01 from '../../../public/work/pomoflow/pomoflow01.png';
+import pomo02 from '../../../public/work/pomoflow/pomoflow02.png';
+---
+
+<Layout title=" - PomoFlow">
+	<div class="flex justify-center items-center max-w-5xl mb-5">
+		<p class="text-[4rem] md:text-[6rem] z-10">Work</p>
+		<object
+			data="/work/jitoneko_work.svg"
+			type="image/svg+xml"
+			class="ml-[-10%] w-[55%]"></object>
+	</div>
+
+	<div class="w-full flex justify-center">
+		<div class="w-[70%]">
+			<div class="flex items-center">
+				<a href="/work" class="hover:underline">Work</a>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="16"
+					height="24"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					class="mx-2"><path d="m9 18 6-6-6-6"></path></svg
+				>
+				<h2 class="inline-block text-2xl md:text-4xl mr-2">PomoFlow</h2>
+				<span>2023-</span>
+			</div>
+			<div class="flex flex-col items-center">
+				<div class="my-5 px-5">
+					<div class="indent-[1.5rem] text-[1rem] md:text-[1.25rem]">
+						<p>
+							PomoFlow is a pomodoro timer app that helps you focus on your work
+							by using the pomodoro technique. Moving away from a plain,
+							inorganic UI and incorporating the idea of gamification can get
+							you off to a comfortable start.
+						</p>
+						<p>
+							This application was created in my early days of React and will be
+							updated a lot in the future to make it more practical.
+						</p>
+						<p>Currently in production (alpha version)</p>
+					</div>
+				</div>
+			</div>
+			<div class="flex items-center">
+				<span>WEBSITE</span>
+				<a
+					href="https://pomofl0w.netlify.app/"
+					class="flex items-center hover:underline"
+					>https://pomofl0w.netlify.app/
+					<TbExternalLink />
+				</a>
+			</div>
+			<div class="flex items-center">
+				<span>PLATFORM</span>
+				<p>Web</p>
+			</div>
+			<div class="flex items-center">
+				<span>STACK</span>
+				<p>React, ChakraUI, Three.js, Blender</p>
+			</div>
+
+			<div class="flex flex-col items-center mt-5">
+				<Image
+					src={pomo01}
+					alt="sample image"
+					class="rounded-xl w-[80%] mb-5"
+				/>
+				<Image src={pomo02} alt="sample image" class="rounded-xl w-[80%]" />
+			</div>
+			<div class="w-full flex justify-center mt-5">
+				<a
+					href="/work"
+					class="btn border-none bg-navy-200 dark:bg-beige-200 text-beige-100 dark:text-navy-200 hover:bg-navy-100 dark:hover:bg-beige-100 transition duration-200 ease-in-out"
+				>
+					Return to Work
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<style>
+		span {
+			font-size: 10px;
+			font-weight: 700;
+			border-radius: 4px;
+			padding: 2px 4px;
+			margin-right: 5px;
+			background-color: rgba(255, 255, 255, 0.5);
+		}
+	</style>
+</Layout>

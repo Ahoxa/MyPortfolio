@@ -3,17 +3,18 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title=" - Not Found">
-	<object data="/jitoneko_cup.svg" type="image/svg+xml" class="max-w-[500px]"
-	></object>
-	<h1 class="text-4xl font-bold my-10">Page Not Found</h1>
-	<p>Oops!</p>
-	<p>The page you&apos;re looking for was not found.</p>
-	<a href="/">
-		<button
+	<div class="flex flex-col items-center">
+		<object data="/jitoneko_cup.svg" type="image/svg+xml" class="max-w-[500px]"
+		></object>
+		<h1 class="text-4xl font-bold my-10">Page Not Found</h1>
+		<p>Oops!</p>
+		<p>The page you&apos;re looking for was not found.</p>
+		<a
+			href="/"
 			class="rounded-[4px] text-sm md:text-md py-1 md:py-3 px-2 md:px-7 my-10 bg-navy-200 dark:bg-beige-200 text-beige-100 dark:text-navy-200 hover:bg-navy-100 dark:hover:bg-beige-100 transition duration-200 ease-in-out"
-			>Return to home</button
-		>
-	</a>
+			>Back to Home
+		</a>
+	</div>
 </Layout>
 
 <style>

@@ -1,0 +1,114 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { TbExternalLink } from 'react-icons/tb';
+import { Image } from 'astro:assets';
+import poster from '../../../public/work/ebisu/ebisu.png';
+import ebisu01 from '../../../public/work/ebisu/ebisu01.jpg';
+import ebisu02 from '../../../public/work/ebisu/ebisu02.jpg';
+---
+
+<Layout title=" - Yebis Poster">
+	<div class="flex justify-center items-center max-w-5xl mb-5">
+		<p class="text-[4rem] md:text-[6rem] z-10">Work</p>
+		<object
+			data="/work/jitoneko_work.svg"
+			type="image/svg+xml"
+			class="ml-[-10%] w-[55%]"></object>
+	</div>
+
+	<div class="w-full flex justify-center">
+		<div class="w-[70%]">
+			<div class="flex items-center">
+				<a href="/work" class="hover:underline">Work</a>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="16"
+					height="24"
+					viewBox="0 0 24 24"
+					fill="none"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					class="mx-2"><path d="m9 18 6-6-6-6"></path></svg
+				>
+				<h2 class="inline-block text-2xl md:text-4xl mr-2">Ebisu Poster</h2>
+				<span>2022</span>
+			</div>
+			<div class="flex flex-col items-center">
+				<div class="my-5 px-5">
+					<div class="indent-[1.5rem] text-[1rem] md:text-[1.25rem]">
+						<p>
+							This poster is the official poster used at the "Yebisu Otoko
+							Selection @ Osaka University Hill" held at the beginning of the
+							New Year.
+						</p>
+						<p>
+							I was in charge of the event as the executive committee chairman,
+							and was in charge of everything from the management to the poster
+							design.
+						</p>
+						<p>
+							This poster was created using Adobe Illustrator and Photoshop.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="flex items-center">
+				<span>WEBSITE</span>
+				<a
+					href="https://mtmr.jp/ebisu/"
+					class="flex items-center hover:underline"
+					>https://mtmr.jp/ebisu/
+					<TbExternalLink />
+				</a>
+			</div>
+			<div class="flex items-center">
+				<span>POST</span>
+				<a
+					href="https://www.city.ikeda.osaka.jp/ikedamoyo/16130.html"
+					class="flex items-center hover:underline"
+					>https://www.city.ikeda.osaka.jp/ikedamoyo/16130.html
+					<TbExternalLink />
+				</a>
+			</div>
+			<div class="flex items-center">
+				<span>STACK</span>
+				<p>Adobe Illustrator, Photoshop</p>
+			</div>
+
+			<div class="flex flex-col items-center mt-5">
+				<Image
+					src={poster}
+					alt="sample image"
+					class="rounded-xl w-[80%] mb-5"
+				/>
+				<Image
+					src={ebisu01}
+					alt="sample image"
+					class="rounded-xl w-[80%] mb-5"
+				/>
+				<Image src={ebisu02} alt="sample image" class="rounded-xl w-[80%]" />
+			</div>
+			<div class="w-full flex justify-center mt-5">
+				<a
+					href="/work"
+					class="btn border-none bg-navy-200 dark:bg-beige-200 text-beige-100 dark:text-navy-200 hover:bg-navy-100 dark:hover:bg-beige-100 transition duration-200 ease-in-out"
+				>
+					Return to Work
+				</a>
+			</div>
+		</div>
+	</div>
+</Layout>
+
+<style>
+	span {
+		font-size: 10px;
+		font-weight: 700;
+		border-radius: 4px;
+		padding: 2px 4px;
+		margin-right: 5px;
+		background-color: rgba(255, 255, 255, 0.5);
+	}
+</style>
