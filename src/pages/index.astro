@@ -4,6 +4,7 @@ import HeroImage from '../components/heroImage/HeroImage.astro';
 import Profile from '../components/Profile.astro';
 import Bio from '../components/Bio.astro';
 import SNS from '../components/SNS.astro';
+import { IoMdMail } from 'react-icons/io';
 ---
 
 <Layout>
@@ -13,4 +14,19 @@ import SNS from '../components/SNS.astro';
 	</div>
 	<Bio />
 	<SNS />
+
+	<h1 class="text-[3rem] font-bold underline mb-5">Contact Me!</h1>
+	<div class="flex flex-col items-center gap-5">
+		<p class="text-xl">
+			If you would like to contact me, you can do so here.<br />
+			I welcome any feedback on my work.
+		</p>
+		<a
+			href="/contact"
+			class="btn border-none bg-navy-200 dark:bg-beige-200 text-beige-100 dark:text-navy-200 hover:bg-navy-100 dark:hover:bg-beige-100 transition duration-200 ease-in-out"
+		>
+			<IoMdMail size={25} />
+			Contact Me
+		</a>
+	</div>
 </Layout>

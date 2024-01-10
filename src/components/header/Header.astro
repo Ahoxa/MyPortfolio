@@ -2,6 +2,7 @@
 import Logo from './Logo.tsx';
 import ThemeToggleButton from './ThemeToggleButton.tsx';
 import { IoLogoGithub } from 'react-icons/io5';
+import { IoMdMail } from 'react-icons/io';
 import { RxHamburgerMenu } from 'react-icons/rx';
 ---
 
@@ -32,9 +33,15 @@ import { RxHamburgerMenu } from 'react-icons/rx';
 		<!-- Here ThemeToggleButton -->
 		<div class="flex-grow flex justify-end items-center mr-2">
 			<a
+				href="/contact"
+				class="w-10 h-10 flex justify-center items-center mr-1 hover:opacity-80"
+			>
+				<IoMdMail size={25} />
+			</a>
+			<a
 				href="https://github.com/Ahoxa/MyPortfolio"
-				class="w-10 h-10 flex justify-center items-center mr-4"
-				><IoLogoGithub size={30} /></a
+				class="w-10 h-10 flex justify-center items-center mr-2 hover:opacity-80"
+				><IoLogoGithub size={25} /></a
 			>
 			<ThemeToggleButton client:load />
 
