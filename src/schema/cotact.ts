@@ -1,9 +1,7 @@
 import {
-  type LiteralSchema,
   type Output,
   type StringSchema,
   email,
-  literal,
   maxLength,
   minLength,
   object,
