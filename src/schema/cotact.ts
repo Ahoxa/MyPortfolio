@@ -23,19 +23,13 @@ const nameSchema: StringSchema<string> = string([
 
 const messageSchema: StringSchema<string> = string([
   minLength(1, "required field"),
-  maxLength(4098, "Please enter up to 4098 characters"),
+  maxLength(300, "Please enter up to 300 characters"),
 ]);
-
-const agreeSchema: LiteralSchema<"true", "true"> = literal(
-  "true",
-  "Please agree to the terms and conditions",
-);
 
 export const ContactSchema = object({
   email: emailSchema,
   name: nameSchema,
   message: messageSchema,
-  agree: agreeSchema,
 });
 
 export type ContactType = Output<typeof ContactSchema>;

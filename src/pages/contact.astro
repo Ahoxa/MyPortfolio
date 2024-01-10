@@ -1,0 +1,12 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { ContactForm } from '../components/Contact';
+---
+
+<Layout>
+	<div class="flex flex-col items-center">
+		<h1 class="text-[2.5rem]">Contact</h1>
+		<p>Get in touch with me</p>
+		<ContactForm client:load />
+	</div>
+</Layout>
