@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import Qiita from '../../public/post/Qiita_Logo.png';
+import Zenn from '../../public/post/Zenn_Logo.png';
+---
+
+<Layout>
+	<div class="flex justify-center relative items-center max-w-5xl mb-5">
+		<p class="text-[4rem] md:text-[6rem] z-10">Post</p>
+		<object
+			data="/post/jitoneko_post.svg"
+			type="image/svg+xml"
+			class="ml-[-10%] w-[55%]"></object>
+	</div>
+	<p class="text-center font-bold text-sm md:text-xl my-5">
+		You can read my tech blog on these websites.
+	</p>
+	<div class="flex flex-col md:flex-row justify-center items-center">
+		<!-- For some reason, tailwindcss was not applied, so I use style attribute here. -->
+		<a href="https://qiita.com/Ahoxa" target="_blank" class="mb-3 md:mb-0 md:mr-5">
+			<Image
+				src={Qiita}
+				alt="Qiita's Logo"
+				width={200}
+				class="rounded-lg qiita"
+			/>
+		</a>
+		<a href="https://zenn.dev/ahoxa" target="_blank">
+			<Image src={Zenn} alt="Zenn's Logo" width={210} class="rounded-lg" />
+		</a>
+	</div>
+</Layout>
