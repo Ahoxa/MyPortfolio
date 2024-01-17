@@ -2,9 +2,6 @@
 import Layout from '../../layouts/Layout.astro';
 import { TbExternalLink } from 'react-icons/tb';
 import { Image } from 'astro:assets';
-import poster from '../../../public/work/ebisu/ebisu.png';
-import ebisu01 from '../../../public/work/ebisu/ebisu01.jpg';
-import ebisu02 from '../../../public/work/ebisu/ebisu02.jpg';
 ---
 
 <Layout title=" - Yebis Poster">
@@ -79,16 +76,26 @@ import ebisu02 from '../../../public/work/ebisu/ebisu02.jpg';
 
 			<div class="flex flex-col items-center mt-5">
 				<Image
-					src={poster}
+					src="/work/ebisu/ebisu.png"
 					alt="sample image"
 					class="rounded-xl w-[80%] mb-5"
+					width={1000}
+					height={1414}
 				/>
 				<Image
-					src={ebisu01}
+					src="/work/ebisu/ebisu01.jpg"
 					alt="sample image"
 					class="rounded-xl w-[80%] mb-5"
+					width={1000}
+					height={1414}
 				/>
-				<Image src={ebisu02} alt="sample image" class="rounded-xl w-[80%]" />
+				<Image
+					src="/work/ebisu/ebisu02.jpg"
+					alt="sample image"
+					class="rounded-xl w-[80%]"
+					width={1000}
+					height={1414}
+				/>
 			</div>
 			<div class="w-full flex justify-center mt-5">
 				<a

@@ -2,8 +2,6 @@
 import Layout from '../../layouts/Layout.astro';
 import { TbExternalLink } from 'react-icons/tb';
 import { Image } from 'astro:assets';
-import pomo01 from '../../../public/work/pomoflow/pomoflow01.png';
-import pomo02 from '../../../public/work/pomoflow/pomoflow02.png';
 ---
 
 <Layout title=" - PomoFlow">
@@ -71,11 +69,17 @@ import pomo02 from '../../../public/work/pomoflow/pomoflow02.png';
 
 			<div class="flex flex-col items-center mt-5">
 				<Image
-					src={pomo01}
+					src="/work/pomoflow/pomoflow01.png"
 					alt="sample image"
 					class="rounded-xl w-[80%] mb-5"
+					height={500}
+					width={1000}
 				/>
-				<Image src={pomo02} alt="sample image" class="rounded-xl w-[80%]" />
+				<Image src="/work/pomoflow/pomoflow02.png" 
+				alt="sample image" 
+				class="rounded-xl w-[80%]" 
+				width={500} 
+				height={1000} />
 			</div>
 			<div class="w-full flex justify-center mt-5">
 				<a

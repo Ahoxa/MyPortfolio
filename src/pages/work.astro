@@ -1,8 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
-import Pomoflow from '../../public/work/pomoflow/pomoflow.png';
-import Ebisu from '../../public/work/ebisu/ebisu.png';
 ---
 
 <Layout title=" - Work">
@@ -17,7 +15,13 @@ import Ebisu from '../../public/work/ebisu/ebisu.png';
 		<div class="flex max-w-[85%]">
 			<div class="mx-3">
 				<a href="/work/pomoflow">
-					<Image src={Pomoflow} alt="Pomoflow" class="work-img" />
+					<Image
+						src="/work/pomoflow/pomoflow.png"
+						width={1400}
+						height={1400}
+						alt="Pomoflow"
+						class="work-img"
+					/>
 				</a>
 				<h2>PomoFlow</h2>
 				<p class="work-text">
@@ -27,7 +31,13 @@ import Ebisu from '../../public/work/ebisu/ebisu.png';
 			</div>
 			<div class="mx-3">
 				<a href="/work/ebisu">
-					<Image src={Ebisu} alt="ebisu" class="work-img" />
+					<Image
+						src="/work/ebisu/ebisu.png"
+						width={1400}
+						height={1400}
+						alt="ebisu"
+						class="work-img"
+					/>
 				</a>
 				<h2>Ebisu Poster</h2>
 				<p class="work-text">
