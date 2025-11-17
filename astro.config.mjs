@@ -1,17 +1,14 @@
+// @ts-check
 import { defineConfig } from "astro/config";
-import react from "@astrojs/react";
-import tailwind from "@astrojs/tailwind";
+import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
 
-import vercel from "@astrojs/vercel/serverless";
+import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [react(), tailwind()],
-  output: "hybrid",
   vite: {
-    ssr: {
-      noExternal: ["react-icons"],
-    },
+    plugins: [vanillaExtractPlugin()],
   },
-  adapter: vercel(),
+
+  integrations: [react()],
 });
