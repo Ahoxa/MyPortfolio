@@ -7,7 +7,7 @@
 		"start": "astro dev",
 		"build": "astro build",
 		"preview": "astro preview",
-		"fmt": "bunx --bun biome check --write .",
+		"fmt": "biome check --write .",
 		"astro": "astro"
 	},
 	"dependencies": {
