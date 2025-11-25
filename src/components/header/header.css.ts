@@ -1,4 +1,5 @@
 import { globalStyle, style } from "@vanilla-extract/css";
+import { zIndex } from "@/constants/zIndex";
 
 export const header = style({
 	position: "fixed",
@@ -7,7 +8,7 @@ export const header = style({
 	width: "100%",
 	paddingTop: "0.75rem",
 	paddingBottom: "0.75rem",
-	zIndex: 20,
+	zIndex: zIndex.header,
 	backdropFilter: "blur(12px)",
 });
 
@@ -129,7 +130,7 @@ export const menuContent = style({
 	position: "absolute",
 	right: 0,
 	top: "100%",
-	zIndex: 1,
+	zIndex: zIndex.menuContent,
 	width: "13rem",
 	padding: "0.5rem",
 	marginTop: "0.5rem",
