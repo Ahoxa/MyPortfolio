@@ -1,93 +1,63 @@
 ---
-import Logo from './Logo.tsx';
-import ThemeToggleButton from './ThemeToggleButton.tsx';
-import { IoLogoGithub } from 'react-icons/io5';
-import { IoMdMail } from 'react-icons/io';
-import { RxHamburgerMenu } from 'react-icons/rx';
+import { IoMdMail } from "react-icons/io";
+import { IoLogoGithub } from "react-icons/io5";
+import { RxHamburgerMenu } from "react-icons/rx";
+import * as styles from "./header.css.ts";
+import Logo from "./Logo.astro";
+import ThemeToggleButton from "./ThemeToggleButton.tsx";
 ---
 
-<header class="fixed flex justify-center w-full py-3 z-20 backdrop-blur-md">
-	<div class="flex items-center w-[95%] md:w-[80%]">
-		<div class="flex-grow">
-			<Logo client:load />
-		</div>
+<header class={styles.header}>
+  <div class={styles.container}>
+    <div class={styles.logoContainer}>
+      <Logo />
+    </div>
 
-		<!-- hover-link and underline are unique class name -->
-		<div class="flex-grow hidden md:flex justify-center md:w-auto mt-4 md:mt-0">
-			<a href="/" class="hover-link relative text-lg">
-				Home
-				<span class="underline"></span>
-			</a>
-			<span class="mx-3">/</span>
-			<a href="/work" class="hover-link relative text-lg">
-				Work
-				<span class="underline"></span>
-			</a>
-			<span class="mx-3">/</span>
-			<a href="/post" class="hover-link relative text-lg">
-				Post
-				<span class="underline"></span>
-			</a>
-		</div>
+    <!-- hover-link and underline are unique class name -->
+    <div class={styles.navContainer}>
+      <a href="/" class={styles.navLink}>
+        Home
+        <span class={styles.underline}></span>
+      </a>
+      <span class={styles.separator}>/</span>
+      <a href="/work" class={styles.navLink}>
+        Work
+        <span class={styles.underline}></span>
+      </a>
+      <span class={styles.separator}>/</span>
+      <a href="/post" class={styles.navLink}>
+        Post
+        <span class={styles.underline}></span>
+      </a>
+    </div>
 
-		<!-- Here ThemeToggleButton -->
-		<div class="flex-grow flex justify-end items-center mr-2">
-			<a
-				href="/contact"
-				class="w-10 h-10 flex justify-center items-center mr-1 hover:opacity-80"
-			>
-				<IoMdMail size={25} />
-			</a>
-			<a
-				href="https://github.com/Ahoxa/MyPortfolio"
-				class="w-10 h-10 flex justify-center items-center mr-2 hover:opacity-80"
-				><IoLogoGithub size={25} /></a
-			>
-			<ThemeToggleButton client:load />
+    <!-- Here ThemeToggleButton -->
+    <div class={styles.actionsContainer}>
+      <a href="/contact" class={styles.iconLink}>
+        <IoMdMail size={25} />
+      </a>
+      <a
+        href="https://github.com/Ahoxa/MyPortfolio"
+        class={styles.githubIconLink}><IoLogoGithub size={25} /></a
+      >
+      <ThemeToggleButton client:load />
 
-			<div
-				class="dropdown dropdown-bottom dropdown-end inline-block md:hidden ml-5"
-			>
-				<div
-					tabindex="0"
-					role="button"
-					class="btn bg-transparent text-current m-1"
-				>
-					<RxHamburgerMenu />
-				</div>
-				<ul
-					tabindex="0"
-					class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
-				>
-					<li><a href="/">Home</a></li>
-					<li><a href="/work">Work</a></li>
-					<li><a href="/post">Post</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
+      <div class={styles.mobileMenuContainer}>
+        <div tabindex="0" role="button" class={styles.menuButton}>
+          <RxHamburgerMenu />
+        </div>
+        <ul tabindex="0" class={`${styles.menuContent} ${styles.menuList}`}>
+          <li class={styles.menuItem}>
+            <a href="/" class={styles.menuLink}>Home</a>
+          </li>
+          <li class={styles.menuItem}>
+            <a href="/work" class={styles.menuLink}>Work</a>
+          </li>
+          <li class={styles.menuItem}>
+            <a href="/post" class={styles.menuLink}>Post</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </header>
-
-<style>
-	.hover-link {
-		position: relative;
-		cursor: pointer;
-	}
-
-	.hover-link:hover .underline {
-		transform: scaleX(1);
-		transform-origin: left;
-	}
-
-	.underline {
-		position: absolute;
-		bottom: -1px;
-		left: 15%;
-		height: 1px;
-		width: 75%;
-		background-color: currentColor;
-		transform-origin: right;
-		transform: scaleX(0);
-		transition: transform 300ms ease-in-out;
-	}
-</style>
